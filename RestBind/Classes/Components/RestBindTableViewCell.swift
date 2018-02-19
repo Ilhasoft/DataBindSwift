@@ -26,8 +26,7 @@ open class RestBindTableViewCell: UITableViewCell, ISOnDemandTableViewCell {
  
     open func setupCell(with object: Any, at indexPath: IndexPath) {
         self.object = object as! Map
-        restBindFillView.fetchedObject = self.object
-        restBindFillView.fillFields()
+        restBindFillView.fillFields(withObject:self.object)
     }
     
 }

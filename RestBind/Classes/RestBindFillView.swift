@@ -100,13 +100,74 @@ public class RestBindFillView: UIView {
                                     if let error = error {
                                         print(error.localizedDescription)
                                     }
-                                    self.delegate?.didFill(component: component, value: imageView.image!)
+                                    self.delegate?.didFill(component: component, value: imageView.image ?? UIImage())
                                 })
                             }
                             
                         }else {
                             print("field \(key) doesn't contains a valid URL")
                         }
+                    }else if let _ = component as? UIScrollView {
+                        
+                        if let delegate = self.delegate {
+                            if let newValue = delegate.willFill(component: component, value: value as Any) {
+                                value = newValue
+                            }else {
+                                return
+                            }
+                        }
+                        
+                    }else if let textField = component as? UITextField {
+                        if let delegate = self.delegate {
+                            if let newValue = delegate.willFill(component: component, value: value) {
+                                value = newValue
+                            }else {
+                                return
+                            }
+                        }
+                        textField.text = String(describing: value)
+                        
+                        self.delegate?.didFill(component: component, value: value)
+                        
+                    }else if let textView = component as? UITextView {
+                        
+                        if let delegate = self.delegate {
+                            if let newValue = delegate.willFill(component: component, value: value) {
+                                value = newValue
+                            }else {
+                                return
+                            }
+                        }
+                        
+                        textView.text = value as! String
+                        
+                        self.delegate?.didFill(component: component, value: value)
+                        
+                    }else if let slider = component as? UISlider {
+                        
+                        if let delegate = self.delegate {
+                            if let newValue = delegate.willFill(component: component, value: value) {
+                                value = newValue
+                            }else {
+                                return
+                            }
+                        }
+                        
+                        slider.value = value as! Float
+                        self.delegate?.didFill(component: component, value: value)
+                        
+                    }else if let uiSwitch = component as? UISwitch {
+                        
+                        if let delegate = self.delegate {
+                            if let newValue = delegate.willFill(component: component, value: value) {
+                                value = newValue
+                            }else {
+                                return
+                            }
+                        }
+                        
+                        uiSwitch.isOn = value as! Bool
+                        self.delegate?.didFill(component: component, value: value)
                     }
                     
                     return
@@ -115,8 +176,8 @@ public class RestBindFillView: UIView {
         }
     }
     
-    func fillFields() {
-        
+    public func fillFields(withObject object:Map) {
+        self.fetchedObject = object
         sortFields()
         if let fields = fields , !fields.isEmpty {
             for field in fields {
