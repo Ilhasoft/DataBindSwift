@@ -25,12 +25,24 @@ public class DataBindView: UIView {
     private var currentKeyPath = [String]()
     private var nextObjectQueue = [[String:[String:Any]]]()
     var fetchedObject:[String:Any]!
-    
+    public var fieldAndValues = [[String:Any]]()
     public var delegate:DataBindViewDelegate?
     
     private func sortFields() {
         if isFieldSorted == true {
             return
+        }
+        var bindableComponentsInSubView =  [UIView]()
+        
+        let fieldsNotDataBindable = fields.filter {(!($0 is DataBindable))}
+        for component in fieldsNotDataBindable as! [UIView] {
+            let bindableComponents = component.getSubviewsOfView(recursive: true) as! [UIView]
+            bindableComponentsInSubView.append(contentsOf: bindableComponents)
+        }
+        
+        if !bindableComponentsInSubView.isEmpty {
+            fields = fields.filter {($0 is DataBindable)}
+            fields.append(contentsOf: bindableComponentsInSubView as [AnyObject])
         }
         
         let fieldsSortered = fields.sorted { (parseField1, parseField2) -> Bool in
@@ -106,16 +118,6 @@ public class DataBindView: UIView {
                         }else {
                             print("field \(key) doesn't contains a valid URL")
                         }
-                    }else if let _ = component as? UIScrollView {
-                        
-                        if let delegate = self.delegate {
-                            if let newValue = delegate.willFill(component: component, value: value as Any) {
-                                value = newValue
-                            }else {
-                                return
-                            }
-                        }
-                        
                     }else if let textField = component as? UITextField {
                         if let delegate = self.delegate {
                             if let newValue = delegate.willFill(component: component, value: value) {
@@ -167,6 +169,17 @@ public class DataBindView: UIView {
                         
                         uiSwitch.isOn = value as! Bool
                         self.delegate?.didFill(component: component, value: value)
+                        
+                    }else if let _ = component as? UIScrollView {
+                        
+                        if let delegate = self.delegate {
+                            if let newValue = delegate.willFill(component: component, value: value as Any) {
+                                value = newValue
+                            }else {
+                                return
+                            }
+                        }
+                        
                     }
                     
                     return
@@ -221,6 +234,129 @@ public class DataBindView: UIView {
             }
             self.delegate?.didFetch(error: nil)
         }
+    }
+    
+    private func buildFieldAndValues() {
+        self.sortFields()
+        
+        for field in self.fields {
+            
+            let fieldPath = (field as! DataBindable).fieldPath
+            let fieldType = DataBindFieldType(rawValue: (field as! DataBindable).fieldType)
+            
+            var fieldValue:AnyObject!
+            
+            guard fieldPath.count > 0 else {
+                print("fieldPath is nil")
+                continue
+            }
+            
+            guard fieldType != nil else {
+                print("fieldType is nil")
+                continue
+            }
+            
+            if let textField = field as? DataBindable , textField is UITextField
+                && textField.fieldPath.count > 0 {
+                
+                if ((textField as! UITextField).text!.count) > 0 {
+                    fieldValue = (textField as! UITextField).text! as AnyObject!
+                }else {
+                    fieldValue = "" as AnyObject
+                }
+                
+            }else if let textView = field as? DataBindable, textView is UITextView
+                && textView.fieldPath.count > 0 {
+                if ((textView as! UITextView).text!.count) > 0 {
+                    fieldValue = (textView as! UITextView).text! as AnyObject!
+                }else {
+                    fieldValue = "" as AnyObject
+                }
+                
+            }else if let imageView = field as? DataBindable, imageView is UIImageView
+                && imageView.fieldPath.count > 0 {
+                if (imageView as! UIImageView).image != nil {
+                    fieldValue = (imageView as! UIImageView).image
+                }else {
+                    fieldValue = NSNull()
+                }
+                
+            }else if let slider = field as? DataBindable, slider is UISlider
+                && slider.fieldPath.count > 0 {
+                if (slider as! UISlider).value != -1 {
+                    fieldValue = (slider as! UISlider).value as AnyObject!
+                }else {
+                    fieldValue = NSNull()
+                }
+                
+            }else if let uiSwitch = field as? DataBindable, uiSwitch is UISwitch
+                && uiSwitch.fieldPath.count > 0 {
+                fieldValue = (uiSwitch as! UISwitch).isOn as AnyObject!
+                
+            }else {
+                continue
+            }
+            
+            if let delegate = self.delegate {
+                if let newValue = delegate.willSet(component: field, value: fieldValue) {
+                    fieldValue = newValue as AnyObject
+                }else {
+                    continue
+                }
+            }
+            
+            guard (field as! DataBindable).persist == true else {
+                print("\(field) is .persist false")
+                continue
+            }
+            
+            fieldValue = self.getObjectFieldValue(field:field, fieldValue: fieldValue, fieldType: fieldType!) as AnyObject!
+            self.delegate?.didSet(component: field, value: fieldValue)
+            
+            self.fieldAndValues.append([fieldPath:fieldValue])
+            
+        }
+    }
+    
+    public func toJSON() -> [String:Any] {
+        self.buildFieldAndValues()
+        
+        guard !self.fieldAndValues.isEmpty else {
+            print("There is no persist fields for save")
+            return [:]
+        }
+        
+        let _ = DataBindEntityBuilder(with: self.fieldAndValues)
+        
+        return (DataBindEntityBuilder.mainDictionary as! [String:Any]).values.first! as! [String:Any]
+    }
+    
+    private func getObjectFieldValue(field:AnyObject,fieldValue:AnyObject,fieldType:DataBindFieldType) -> Any {
+        
+        var fieldValue = fieldValue
+        
+        if field is UISlider {
+            return fieldValue
+        }
+        
+        if !(fieldValue is NSNull) {
+            switch fieldType {
+            case .Number:
+                if let stringValue = fieldValue as? String {
+                    fieldValue = stringValue.replacingOccurrences(of: ",", with: ".") as AnyObject
+                }
+                fieldValue = fieldValue.doubleValue as AnyObject
+                return fieldValue
+            case .Logic:
+                return fieldValue
+            case .Image:
+                return fieldValue
+            default:
+                return fieldValue
+                
+            }
+        }
+        return NSNull()
     }
  
     func verifyUrl(urlString: String?) -> Bool {
