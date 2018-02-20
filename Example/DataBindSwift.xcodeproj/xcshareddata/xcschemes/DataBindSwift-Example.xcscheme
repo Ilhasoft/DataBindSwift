@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "RestBind_Example.app"
-               BlueprintName = "RestBind_Example"
-               ReferencedContainer = "container:RestBind.xcodeproj">
+               BuildableName = "DataBindSwift_Example.app"
+               BlueprintName = "DataBindSwift_Example"
+               ReferencedContainer = "container:DataBindSwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "RestBind_Tests.xctest"
-               BlueprintName = "RestBind_Tests"
-               ReferencedContainer = "container:RestBind.xcodeproj">
+               BuildableName = "DataBindSwift_Tests.xctest"
+               BlueprintName = "DataBindSwift_Tests"
+               ReferencedContainer = "container:DataBindSwift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,9 +48,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "RestBind_Tests.xctest"
-               BlueprintName = "RestBind_Tests"
-               ReferencedContainer = "container:RestBind.xcodeproj">
+               BuildableName = "DataBindSwift_Tests.xctest"
+               BlueprintName = "DataBindSwift_Tests"
+               ReferencedContainer = "container:DataBindSwift.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -58,9 +58,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "RestBind_Example.app"
-            BlueprintName = "RestBind_Example"
-            ReferencedContainer = "container:RestBind.xcodeproj">
+            BuildableName = "DataBindSwift_Example.app"
+            BlueprintName = "DataBindSwift_Example"
+            ReferencedContainer = "container:DataBindSwift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "RestBind_Example.app"
-            BlueprintName = "RestBind_Example"
-            ReferencedContainer = "container:RestBind.xcodeproj">
+            BuildableName = "DataBindSwift_Example.app"
+            BlueprintName = "DataBindSwift_Example"
+            ReferencedContainer = "container:DataBindSwift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -101,9 +101,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "RestBind_Example.app"
-            BlueprintName = "RestBind_Example"
-            ReferencedContainer = "container:RestBind.xcodeproj">
+            BuildableName = "DataBindSwift_Example.app"
+            BlueprintName = "DataBindSwift_Example"
+            ReferencedContainer = "container:DataBindSwift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

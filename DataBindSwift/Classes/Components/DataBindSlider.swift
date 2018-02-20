@@ -1,17 +1,16 @@
 //
-//  ISParseBindImageView.swift
-//  ISParseBind
+//  RestBindSlider.swift
+//  Alamofire
 //
-//  Created by Daniel Amaral on 11/03/17.
-//  Copyright © 2017 Ilhasoft. All rights reserved.
+//  Created by Daniel Amaral on 16/02/18.
 //
 
 import UIKit
 
-open class RestBindImageView: UIImageView, RestBindable {
-
+open class DataBindSlider: UISlider, DataBindable {
+    
     override public init(frame: CGRect) {
-        super.init(frame: frame)
+        super.init(frame:frame)
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -24,5 +23,5 @@ open class RestBindImageView: UIImageView, RestBindable {
     @IBInspectable open var fieldTypeError: String = ""
     @IBInspectable open var fieldPath: String = ""
     @IBInspectable open var persist: Bool = true
-
 }
+

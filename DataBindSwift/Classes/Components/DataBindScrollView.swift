@@ -1,14 +1,13 @@
 //
-//  RestBindLabel.swift
-//  Voy
+//  RestBindScrollView.swift
+//  Alamofire
 //
-//  Created by Daniel Amaral on 07/02/18.
-//  Copyright © 2018 Ilhasoft. All rights reserved.
+//  Created by Daniel Amaral on 09/02/18.
 //
 
 import UIKit
 
-open class RestBindLabel: UILabel, RestBindable {
+open class DataBindScrollView: UIScrollView, DataBindable {
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,9 +19,10 @@ open class RestBindLabel: UILabel, RestBindable {
     
     public var required: Bool = false
     public var requiredError: String = ""
-    public var fieldType: String = "Text"
+    public var fieldType: String = "None"
     public var fieldTypeError: String = ""
     @IBInspectable open var fieldPath: String = ""
     public var persist: Bool = false
     
 }
+

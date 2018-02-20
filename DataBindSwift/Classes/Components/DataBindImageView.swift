@@ -1,15 +1,16 @@
 //
-//  RestBindTextField.swift
-//  Alamofire
+//  ISParseBindImageView.swift
+//  ISParseBind
 //
-//  Created by Daniel Amaral on 16/02/18.
+//  Created by Daniel Amaral on 11/03/17.
+//  Copyright © 2017 Ilhasoft. All rights reserved.
 //
 
 import UIKit
 
-open class RestBindTextField: UITextField, RestBindable {
-    
-    public override init(frame: CGRect) {
+open class DataBindImageView: UIImageView, DataBindable {
+
+    override public init(frame: CGRect) {
         super.init(frame: frame)
     }
     
@@ -23,6 +24,5 @@ open class RestBindTextField: UITextField, RestBindable {
     @IBInspectable open var fieldTypeError: String = ""
     @IBInspectable open var fieldPath: String = ""
     @IBInspectable open var persist: Bool = true
-    
-}
 
+}

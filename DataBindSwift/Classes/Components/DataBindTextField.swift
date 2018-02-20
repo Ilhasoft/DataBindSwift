@@ -1,5 +1,5 @@
 //
-//  RestBindSlider.swift
+//  RestBindTextField.swift
 //  Alamofire
 //
 //  Created by Daniel Amaral on 16/02/18.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-open class RestBindSlider: UISlider, RestBindable {
+open class DataBindTextField: UITextField, DataBindable {
     
-    override public init(frame: CGRect) {
-        super.init(frame:frame)
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -23,5 +23,6 @@ open class RestBindSlider: UISlider, RestBindable {
     @IBInspectable open var fieldTypeError: String = ""
     @IBInspectable open var fieldPath: String = ""
     @IBInspectable open var persist: Bool = true
+    
 }
 

@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		11A21A74CE6F501D6184B73B /* Pods_RestBind_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 004EF7684D64587953377C55 /* Pods_RestBind_Example.framework */; };
 		51F01391610FAE95D48A9088 /* Pods_RestBind_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702FB06218E6097AC4B4A65C /* Pods_RestBind_Tests.framework */; };
-		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		6565FBED202DDB090047F8D8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6565FBE9202DDB090047F8D8 /* .gitkeep */; };
-		6565FBEF202DDB090047F8D8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 6565FBEC202DDB090047F8D8 /* .gitkeep */; };
-		6565FBF9202DE4130047F8D8 /* RestBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565FBF0202DE4120047F8D8 /* RestBind.swift */; };
-		6565FBFA202DE4130047F8D8 /* RestBindTableViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565FBF2202DE4120047F8D8 /* RestBindTableViewProvider.swift */; };
-		6565FBFB202DE4130047F8D8 /* RestBindLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565FBF3202DE4120047F8D8 /* RestBindLabel.swift */; };
-		6565FBFC202DE4130047F8D8 /* RestBindTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565FBF4202DE4120047F8D8 /* RestBindTableViewCell.swift */; };
-		6565FBFD202DE4130047F8D8 /* RestBindTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565FBF5202DE4120047F8D8 /* RestBindTableView.swift */; };
-		6565FBFE202DE4130047F8D8 /* RestBindImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565FBF6202DE4120047F8D8 /* RestBindImageView.swift */; };
-		6565FBFF202DE4130047F8D8 /* RestBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565FBF7202DE4120047F8D8 /* RestBindable.swift */; };
-		6565FC00202DE4130047F8D8 /* RestBindFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565FBF8202DE4130047F8D8 /* RestBindFillView.swift */; };
-		6565FC02202DE44F0047F8D8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565FC01202DE44F0047F8D8 /* StringExtension.swift */; };
-		65AF37FE202E33CE00D64CE4 /* RestBindConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF37FD202E33CD00D64CE4 /* RestBindConfiguration.swift */; };
-		65AF3802202E3FE400D64CE4 /* RestBindScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF3801202E3FE300D64CE4 /* RestBindScrollView.swift */; };
+		65B2EAB6203C80C600BD84C6 /* RestBindFillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAA7203C80C600BD84C6 /* RestBindFillView.swift */; };
+		65B2EAB7203C80C600BD84C6 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65B2EAA8203C80C600BD84C6 /* .gitkeep */; };
+		65B2EAB8203C80C600BD84C6 /* RestBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAA9203C80C600BD84C6 /* RestBindable.swift */; };
+		65B2EABA203C80C600BD84C6 /* RestBindTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAAC203C80C600BD84C6 /* RestBindTextView.swift */; };
+		65B2EABB203C80C600BD84C6 /* RestBindSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAAD203C80C600BD84C6 /* RestBindSlider.swift */; };
+		65B2EABC203C80C600BD84C6 /* RestBindLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAAE203C80C600BD84C6 /* RestBindLabel.swift */; };
+		65B2EABD203C80C600BD84C6 /* RestBindSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAAF203C80C600BD84C6 /* RestBindSwitch.swift */; };
+		65B2EABE203C80C600BD84C6 /* RestBindScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAB0203C80C600BD84C6 /* RestBindScrollView.swift */; };
+		65B2EABF203C80C600BD84C6 /* RestBindTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAB1203C80C600BD84C6 /* RestBindTextField.swift */; };
+		65B2EAC0203C80C600BD84C6 /* RestBindImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAB2203C80C600BD84C6 /* RestBindImageView.swift */; };
+		65B2EAC1203C80C600BD84C6 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAB3203C80C600BD84C6 /* StringExtension.swift */; };
+		65B2EAC2203C80C600BD84C6 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 65B2EAB5203C80C600BD84C6 /* .gitkeep */; };
+		65B2EACC203C816100BD84C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EAC4203C816100BD84C6 /* ViewController.swift */; };
+		65B2EACD203C816100BD84C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B2EAC5203C816100BD84C6 /* LaunchScreen.xib */; };
+		65B2EACE203C816100BD84C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B2EAC7203C816100BD84C6 /* Main.storyboard */; };
+		65B2EACF203C816100BD84C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B2EAC9203C816100BD84C6 /* Images.xcassets */; };
+		65B2EAD0203C816100BD84C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B2EACA203C816100BD84C6 /* AppDelegate.swift */; };
+		65B2EAD1203C816100BD84C6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65B2EACB203C816100BD84C6 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,29 +44,28 @@
 		004EF7684D64587953377C55 /* Pods_RestBind_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestBind_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6B2B3E78512C8F74A68745 /* Pods-RestBind_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestBind_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestBind_Example/Pods-RestBind_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1E7C9937E2AD8DC503F0E0EF /* RestBind.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RestBind.podspec; path = ../RestBind.podspec; sourceTree = "<group>"; };
-		607FACD01AFB9204008FA782 /* RestBind_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestBind_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* RestBind_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestBind_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* DataBindSwift_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataBindSwift_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* DataBindSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataBindSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6565FBE9202DDB090047F8D8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		6565FBEC202DDB090047F8D8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		6565FBF0202DE4120047F8D8 /* RestBind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBind.swift; sourceTree = "<group>"; };
-		6565FBF2202DE4120047F8D8 /* RestBindTableViewProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindTableViewProvider.swift; sourceTree = "<group>"; };
-		6565FBF3202DE4120047F8D8 /* RestBindLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindLabel.swift; sourceTree = "<group>"; };
-		6565FBF4202DE4120047F8D8 /* RestBindTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindTableViewCell.swift; sourceTree = "<group>"; };
-		6565FBF5202DE4120047F8D8 /* RestBindTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindTableView.swift; sourceTree = "<group>"; };
-		6565FBF6202DE4120047F8D8 /* RestBindImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindImageView.swift; sourceTree = "<group>"; };
-		6565FBF7202DE4120047F8D8 /* RestBindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindable.swift; sourceTree = "<group>"; };
-		6565FBF8202DE4130047F8D8 /* RestBindFillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindFillView.swift; sourceTree = "<group>"; };
-		6565FC01202DE44F0047F8D8 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		65AF37FD202E33CD00D64CE4 /* RestBindConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindConfiguration.swift; sourceTree = "<group>"; };
-		65AF3801202E3FE300D64CE4 /* RestBindScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindScrollView.swift; sourceTree = "<group>"; };
+		65B2EAA7203C80C600BD84C6 /* RestBindFillView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindFillView.swift; sourceTree = "<group>"; };
+		65B2EAA8203C80C600BD84C6 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		65B2EAA9203C80C600BD84C6 /* RestBindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindable.swift; sourceTree = "<group>"; };
+		65B2EAAC203C80C600BD84C6 /* RestBindTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindTextView.swift; sourceTree = "<group>"; };
+		65B2EAAD203C80C600BD84C6 /* RestBindSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindSlider.swift; sourceTree = "<group>"; };
+		65B2EAAE203C80C600BD84C6 /* RestBindLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindLabel.swift; sourceTree = "<group>"; };
+		65B2EAAF203C80C600BD84C6 /* RestBindSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindSwitch.swift; sourceTree = "<group>"; };
+		65B2EAB0203C80C600BD84C6 /* RestBindScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindScrollView.swift; sourceTree = "<group>"; };
+		65B2EAB1203C80C600BD84C6 /* RestBindTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindTextField.swift; sourceTree = "<group>"; };
+		65B2EAB2203C80C600BD84C6 /* RestBindImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestBindImageView.swift; sourceTree = "<group>"; };
+		65B2EAB3203C80C600BD84C6 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		65B2EAB5203C80C600BD84C6 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		65B2EAC4203C816100BD84C6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		65B2EAC6203C816100BD84C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		65B2EAC8203C816100BD84C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65B2EAC9203C816100BD84C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		65B2EACA203C816100BD84C6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65B2EACB203C816100BD84C6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		702FB06218E6097AC4B4A65C /* Pods_RestBind_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestBind_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EF296BEF02F71969DC29AE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		949CF234C692A11E901E9330 /* Pods-RestBind_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestBind_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RestBind_Tests/Pods-RestBind_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,9 +108,9 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				6565FBE7202DDB090047F8D8 /* RestBind */,
+				65B2EAA5203C80C600BD84C6 /* DataBindSwift */,
+				65B2EAC3203C816100BD84C6 /* DataBindSwiftExample */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for RestBind */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				3D56E6844D0BF0AFF3B320D2 /* Pods */,
@@ -122,32 +121,10 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* RestBind_Example.app */,
-				607FACE51AFB9204008FA782 /* RestBind_Tests.xctest */,
+				607FACD01AFB9204008FA782 /* DataBindSwift_Example.app */,
+				607FACE51AFB9204008FA782 /* DataBindSwift_Tests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		607FACD21AFB9204008FA782 /* Example for RestBind */ = {
-			isa = PBXGroup;
-			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
-				607FACD31AFB9204008FA782 /* Supporting Files */,
-			);
-			name = "Example for RestBind";
-			path = RestBind;
-			sourceTree = "<group>";
-		};
-		607FACD31AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACD41AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACE81AFB9204008FA782 /* Tests */ = {
@@ -177,49 +154,61 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		6565FBE7202DDB090047F8D8 /* RestBind */ = {
+		65B2EAA5203C80C600BD84C6 /* DataBindSwift */ = {
 			isa = PBXGroup;
 			children = (
-				6565FBE8202DDB090047F8D8 /* Classes */,
-				6565FBEB202DDB090047F8D8 /* Assets */,
+				65B2EAA6203C80C600BD84C6 /* Classes */,
+				65B2EAB4203C80C600BD84C6 /* Assets */,
 			);
-			name = RestBind;
-			path = ../RestBind;
+			name = DataBindSwift;
+			path = ../DataBindSwift;
 			sourceTree = "<group>";
 		};
-		6565FBE8202DDB090047F8D8 /* Classes */ = {
+		65B2EAA6203C80C600BD84C6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6565FBF1202DE4120047F8D8 /* Components */,
-				6565FBF0202DE4120047F8D8 /* RestBind.swift */,
-				65AF37FD202E33CD00D64CE4 /* RestBindConfiguration.swift */,
-				6565FBF7202DE4120047F8D8 /* RestBindable.swift */,
-				6565FBF8202DE4130047F8D8 /* RestBindFillView.swift */,
-				6565FBE9202DDB090047F8D8 /* .gitkeep */,
-				6565FC01202DE44F0047F8D8 /* StringExtension.swift */,
+				65B2EAA7203C80C600BD84C6 /* RestBindFillView.swift */,
+				65B2EAA8203C80C600BD84C6 /* .gitkeep */,
+				65B2EAA9203C80C600BD84C6 /* RestBindable.swift */,
+				65B2EAAB203C80C600BD84C6 /* Components */,
+				65B2EAB3203C80C600BD84C6 /* StringExtension.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		6565FBEB202DDB090047F8D8 /* Assets */ = {
+		65B2EAAB203C80C600BD84C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6565FBEC202DDB090047F8D8 /* .gitkeep */,
+				65B2EAAC203C80C600BD84C6 /* RestBindTextView.swift */,
+				65B2EAAD203C80C600BD84C6 /* RestBindSlider.swift */,
+				65B2EAAE203C80C600BD84C6 /* RestBindLabel.swift */,
+				65B2EAAF203C80C600BD84C6 /* RestBindSwitch.swift */,
+				65B2EAB0203C80C600BD84C6 /* RestBindScrollView.swift */,
+				65B2EAB1203C80C600BD84C6 /* RestBindTextField.swift */,
+				65B2EAB2203C80C600BD84C6 /* RestBindImageView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		65B2EAB4203C80C600BD84C6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				65B2EAB5203C80C600BD84C6 /* .gitkeep */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		6565FBF1202DE4120047F8D8 /* Components */ = {
+		65B2EAC3203C816100BD84C6 /* DataBindSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
-				65AF3801202E3FE300D64CE4 /* RestBindScrollView.swift */,
-				6565FBF2202DE4120047F8D8 /* RestBindTableViewProvider.swift */,
-				6565FBF3202DE4120047F8D8 /* RestBindLabel.swift */,
-				6565FBF4202DE4120047F8D8 /* RestBindTableViewCell.swift */,
-				6565FBF5202DE4120047F8D8 /* RestBindTableView.swift */,
-				6565FBF6202DE4120047F8D8 /* RestBindImageView.swift */,
+				65B2EAC4203C816100BD84C6 /* ViewController.swift */,
+				65B2EAC5203C816100BD84C6 /* LaunchScreen.xib */,
+				65B2EAC7203C816100BD84C6 /* Main.storyboard */,
+				65B2EAC9203C816100BD84C6 /* Images.xcassets */,
+				65B2EACA203C816100BD84C6 /* AppDelegate.swift */,
+				65B2EACB203C816100BD84C6 /* Info.plist */,
 			);
-			path = Components;
+			path = DataBindSwiftExample;
 			sourceTree = "<group>";
 		};
 		BA1115037C1630D2B8D01D85 /* Frameworks */ = {
@@ -234,9 +223,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* RestBind_Example */ = {
+		607FACCF1AFB9204008FA782 /* DataBindSwift_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "RestBind_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "DataBindSwift_Example" */;
 			buildPhases = (
 				47294566328DF95D2EB5C653 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -249,14 +238,14 @@
 			);
 			dependencies = (
 			);
-			name = RestBind_Example;
+			name = DataBindSwift_Example;
 			productName = RestBind;
-			productReference = 607FACD01AFB9204008FA782 /* RestBind_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* DataBindSwift_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* RestBind_Tests */ = {
+		607FACE41AFB9204008FA782 /* DataBindSwift_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "RestBind_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "DataBindSwift_Tests" */;
 			buildPhases = (
 				6BCBE40775003F3CE0D7919A /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -270,9 +259,9 @@
 			dependencies = (
 				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
 			);
-			name = RestBind_Tests;
+			name = DataBindSwift_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* RestBind_Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* DataBindSwift_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -296,7 +285,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "RestBind" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "DataBindSwift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -309,8 +298,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* RestBind_Example */,
-				607FACE41AFB9204008FA782 /* RestBind_Tests */,
+				607FACCF1AFB9204008FA782 /* DataBindSwift_Example */,
+				607FACE41AFB9204008FA782 /* DataBindSwift_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -320,11 +309,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				6565FBEF202DDB090047F8D8 /* .gitkeep in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				6565FBED202DDB090047F8D8 /* .gitkeep in Resources */,
+				65B2EAC2203C80C600BD84C6 /* .gitkeep in Resources */,
+				65B2EACF203C816100BD84C6 /* Images.xcassets in Resources */,
+				65B2EAD1203C816100BD84C6 /* Info.plist in Resources */,
+				65B2EACD203C816100BD84C6 /* LaunchScreen.xib in Resources */,
+				65B2EAB7203C80C600BD84C6 /* .gitkeep in Resources */,
+				65B2EACE203C816100BD84C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,19 +443,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6565FBFD202DE4130047F8D8 /* RestBindTableView.swift in Sources */,
-				6565FBFA202DE4130047F8D8 /* RestBindTableViewProvider.swift in Sources */,
-				6565FBF9202DE4130047F8D8 /* RestBind.swift in Sources */,
-				6565FBFF202DE4130047F8D8 /* RestBindable.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				6565FBFC202DE4130047F8D8 /* RestBindTableViewCell.swift in Sources */,
-				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				6565FC02202DE44F0047F8D8 /* StringExtension.swift in Sources */,
-				6565FC00202DE4130047F8D8 /* RestBindFillView.swift in Sources */,
-				65AF3802202E3FE400D64CE4 /* RestBindScrollView.swift in Sources */,
-				65AF37FE202E33CE00D64CE4 /* RestBindConfiguration.swift in Sources */,
-				6565FBFE202DE4130047F8D8 /* RestBindImageView.swift in Sources */,
-				6565FBFB202DE4130047F8D8 /* RestBindLabel.swift in Sources */,
+				65B2EAB8203C80C600BD84C6 /* RestBindable.swift in Sources */,
+				65B2EABC203C80C600BD84C6 /* RestBindLabel.swift in Sources */,
+				65B2EABE203C80C600BD84C6 /* RestBindScrollView.swift in Sources */,
+				65B2EABD203C80C600BD84C6 /* RestBindSwitch.swift in Sources */,
+				65B2EAB6203C80C600BD84C6 /* RestBindFillView.swift in Sources */,
+				65B2EABA203C80C600BD84C6 /* RestBindTextView.swift in Sources */,
+				65B2EACC203C816100BD84C6 /* ViewController.swift in Sources */,
+				65B2EABF203C80C600BD84C6 /* RestBindTextField.swift in Sources */,
+				65B2EAD0203C816100BD84C6 /* AppDelegate.swift in Sources */,
+				65B2EAC0203C80C600BD84C6 /* RestBindImageView.swift in Sources */,
+				65B2EAC1203C80C600BD84C6 /* StringExtension.swift in Sources */,
+				65B2EABB203C80C600BD84C6 /* RestBindSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,26 +471,26 @@
 /* Begin PBXTargetDependency section */
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* RestBind_Example */;
+			target = 607FACCF1AFB9204008FA782 /* DataBindSwift_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		65B2EAC5203C816100BD84C6 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
+				65B2EAC6203C816100BD84C6 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		65B2EAC7203C816100BD84C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65B2EAC8203C816100BD84C6 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -677,7 +666,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "RestBind" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "DataBindSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACED1AFB9204008FA782 /* Debug */,
@@ -686,7 +675,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "RestBind_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "DataBindSwift_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
@@ -695,7 +684,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "RestBind_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "DataBindSwift_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,

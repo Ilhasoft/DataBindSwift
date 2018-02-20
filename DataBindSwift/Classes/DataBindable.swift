@@ -1,5 +1,5 @@
 //
-//  RestBindable.swift
+//  DataBindable.swift
 //  Voy
 //
 //  Created by Daniel Amaral on 07/02/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc public protocol RestBindable {
+@objc public protocol DataBindable {
     
     var required: Bool { get set }
     var requiredError: String { get set }

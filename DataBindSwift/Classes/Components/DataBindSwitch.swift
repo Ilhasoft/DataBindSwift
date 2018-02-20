@@ -1,5 +1,5 @@
 //
-//  RestBindTextView.swift
+//  RestBindSwitch.swift
 //  Alamofire
 //
 //  Created by Daniel Amaral on 16/02/18.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-open class RestBindTextView: UITextView, RestBindable {
+open class DataBindSwitch: UISwitch, DataBindable {
     
-    public override init(frame: CGRect, textContainer: NSTextContainer?) {
-        super.init(frame: frame, textContainer: textContainer)
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
     }
+    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }

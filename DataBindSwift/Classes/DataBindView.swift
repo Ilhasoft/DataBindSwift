@@ -1,16 +1,15 @@
 //
-//  RestBindFillData.swift
-//  Voy
+//  DataBindView.swift
+//  DataBindSwift
 //
 //  Created by Daniel Amaral on 07/02/18.
 //  Copyright © 2018 Ilhasoft. All rights reserved.
 //
 
 import UIKit
-import ObjectMapper
 import Kingfisher
 
-public protocol RestBindFillViewDelegate {
+public protocol DataBindViewDelegate {
     func didFetch(error:Error?)
     func willFill(component:Any, value:Any) -> Any?
     func didFill(component:Any, value: Any)
@@ -18,16 +17,16 @@ public protocol RestBindFillViewDelegate {
     func didSet(component:Any, value: Any)
 }
 
-public class RestBindFillView: UIView {
+public class DataBindView: UIView {
 
     @IBOutlet open var fields:[AnyObject]!
     
     private var isFieldSorted = false
     private var currentKeyPath = [String]()
-    private var nextObjectQueue = [[String:Map]]()
-    var fetchedObject:Map!
+    private var nextObjectQueue = [[String:[String:Any]]]()
+    var fetchedObject:[String:Any]!
     
-    public var delegate:RestBindFillViewDelegate?
+    public var delegate:DataBindViewDelegate?
     
     private func sortFields() {
         if isFieldSorted == true {
@@ -35,8 +34,8 @@ public class RestBindFillView: UIView {
         }
         
         let fieldsSortered = fields.sorted { (parseField1, parseField2) -> Bool in
-            if parseField1 is RestBindable && parseField2 is RestBindable {
-                return (parseField1 as! RestBindable).fieldPath.components(separatedBy: ".").count < (parseField2 as! RestBindable).fieldPath.components(separatedBy: ".").count
+            if parseField1 is DataBindable && parseField2 is DataBindable {
+                return (parseField1 as! DataBindable).fieldPath.components(separatedBy: ".").count < (parseField2 as! DataBindable).fieldPath.components(separatedBy: ".").count
             }else {
                 return false
             }
@@ -46,28 +45,28 @@ public class RestBindFillView: UIView {
         isFieldSorted = true
     }
     
-    private func extractValueAndUpdateComponent(map:Map,component:UIView) {
+    private func extractValueAndUpdateComponent(object:[String:Any],component:UIView) {
         
         var valueIsPFObject = false
         
-        for key in map.JSON.keys {
-            valueIsPFObject = map.JSON[key] is [String:Any]
+        for key in object.keys {
+            valueIsPFObject = object[key] is [String:Any]
             if valueIsPFObject {
                 let filtered = nextObjectQueue.filter {($0.keys.first! == key.capitalizeFirst)}
                 if filtered.isEmpty {
-                    let downMap = Map(mappingType: .fromJSON, JSON: map.JSON[key] as! [String:Any])
+                    let downMap = object[key] as! [String:Any]
                     nextObjectQueue.append([key:downMap])
-                    extractValueAndUpdateComponent(map:downMap,component:component)
+                    extractValueAndUpdateComponent(object:downMap,component:component)
                 }
                 continue
             }
             if key == currentKeyPath.last {
                 
-                if let map = map.JSON[key] as? [String:Any] {
-                    extractValueAndUpdateComponent(map: Map(mappingType: .fromJSON, JSON: map), component: component)
+                if let object = object[key] as? [String:Any] {
+                    extractValueAndUpdateComponent(object: object, component: component)
                 }else {
                     
-                    var value = map.JSON[key]!
+                    var value = object[key]!
                     
                     if let label = component as? UILabel {
                         
@@ -176,12 +175,12 @@ public class RestBindFillView: UIView {
         }
     }
     
-    public func fillFields(withObject object:Map) {
+    public func fillFields(withObject object:[String:Any]) {
         self.fetchedObject = object
         sortFields()
         if let fields = fields , !fields.isEmpty {
             for field in fields {
-                if let field = field as? RestBindable, field is UIView {
+                if let field = field as? DataBindable, field is UIView {
                     
                     if  !(field.fieldPath.count > 0) {
                         continue
@@ -208,14 +207,14 @@ public class RestBindFillView: UIView {
                     }
                     
                     if currentKeyPath.count == 1 {
-                        extractValueAndUpdateComponent(map:self.fetchedObject, component: (field as! UIView))
+                        extractValueAndUpdateComponent(object:self.fetchedObject, component: (field as! UIView))
                     }else {
                         
                         let filtered = nextObjectQueue.filter {($0.keys.first! == keyPathString.capitalizeFirst)}
                         if filtered.isEmpty {
-                            extractValueAndUpdateComponent(map:self.fetchedObject, component: (field as! UIView))
+                            extractValueAndUpdateComponent(object:self.fetchedObject, component: (field as! UIView))
                         }else {
-                            extractValueAndUpdateComponent(map:filtered.first!.values.first!, component: (field as! UIView))
+                            extractValueAndUpdateComponent(object:filtered.first!.values.first!, component: (field as! UIView))
                         }
                     }
                 }
