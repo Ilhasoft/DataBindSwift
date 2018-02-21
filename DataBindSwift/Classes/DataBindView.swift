@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 public protocol DataBindViewDelegate {
-    func didFetch(error:Error?)
+    func didFillAllComponents(JSON:[String:Any])
     func willFill(component:Any, value:Any) -> Any?
     func didFill(component:Any, value: Any)
     func willSet(component:Any, value:Any) -> Any?
@@ -170,6 +170,18 @@ public class DataBindView: UIView {
                         uiSwitch.isOn = value as! Bool
                         self.delegate?.didFill(component: component, value: value)
                         
+                    }else if let tableView = component as? DataBindTableView {
+                        
+                        if let delegate = self.delegate {
+                            if let newValue = delegate.willFill(component: component, value: value as Any) {
+                                value = newValue
+                            }else {
+                                return
+                            }
+                        }
+                        
+                        tableView.dataList = (value as! [Any])
+                        tableView.reloadData()
                     }else if let _ = component as? UIScrollView {
                         
                         if let delegate = self.delegate {
@@ -232,7 +244,7 @@ public class DataBindView: UIView {
                     }
                 }
             }
-            self.delegate?.didFetch(error: nil)
+            self.delegate?.didFillAllComponents(JSON:self.fetchedObject)
         }
     }
     
@@ -293,6 +305,10 @@ public class DataBindView: UIView {
                 && uiSwitch.fieldPath.count > 0 {
                 fieldValue = (uiSwitch as! UISwitch).isOn as AnyObject!
                 
+            }else if let tableView = field as? DataBindable, tableView is DataBindTableView
+                && tableView.fieldPath.count > 0 {
+                fieldValue = (tableView as! DataBindTableView).dataList as AnyObject!
+                
             }else {
                 continue
             }
@@ -351,6 +367,8 @@ public class DataBindView: UIView {
                 return fieldValue
             case .Image:
                 return fieldValue
+            case .Array:
+                return fieldValue as! [Any]
             default:
                 return fieldValue
                 

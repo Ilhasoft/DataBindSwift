@@ -12,4 +12,5 @@ public enum DataBindFieldType: String {
     case Number = "Number"
     case Logic = "Logic"
     case Image = "Image"
+    case Array = "Array"
 }
