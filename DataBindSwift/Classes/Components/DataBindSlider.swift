@@ -19,9 +19,6 @@ open class DataBindSlider: UISlider, DataBindable {
     
     @IBInspectable open var required: Bool = false
     @IBInspectable open var requiredError: String = ""
-    @IBInspectable open var fieldType: String = ""
-    @IBInspectable open var fieldTypeError: String = ""
     @IBInspectable open var fieldPath: String = ""
-    @IBInspectable open var persist: Bool = true
 }
 

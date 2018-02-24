@@ -254,17 +254,11 @@ public class DataBindView: UIView {
         for field in self.fields {
             
             let fieldPath = (field as! DataBindable).fieldPath
-            let fieldType = DataBindFieldType(rawValue: (field as! DataBindable).fieldType)
             
             var fieldValue:AnyObject!
             
             guard fieldPath.count > 0 else {
                 print("fieldPath is nil")
-                continue
-            }
-            
-            guard fieldType != nil else {
-                print("fieldType is nil")
                 continue
             }
             
@@ -321,12 +315,6 @@ public class DataBindView: UIView {
                 }
             }
             
-            guard (field as! DataBindable).persist == true else {
-                print("\(field) is .persist false")
-                continue
-            }
-            
-            fieldValue = self.getObjectFieldValue(field:field, fieldValue: fieldValue, fieldType: fieldType!) as AnyObject!
             self.delegate?.didSet(component: field, value: fieldValue)
             
             self.fieldAndValues.append([fieldPath:fieldValue])
@@ -347,35 +335,6 @@ public class DataBindView: UIView {
         return (DataBindEntityBuilder.mainDictionary as! [String:Any]).values.first! as! [String:Any]
     }
     
-    private func getObjectFieldValue(field:AnyObject,fieldValue:AnyObject,fieldType:DataBindFieldType) -> Any {
-        
-        var fieldValue = fieldValue
-        
-        if field is UISlider {
-            return fieldValue
-        }
-        
-        if !(fieldValue is NSNull) {
-            switch fieldType {
-            case .Number:
-                if let stringValue = fieldValue as? String {
-                    fieldValue = stringValue.replacingOccurrences(of: ",", with: ".") as AnyObject
-                }
-                fieldValue = fieldValue.doubleValue as AnyObject
-                return fieldValue
-            case .Logic:
-                return fieldValue
-            case .Image:
-                return fieldValue
-            case .Array:
-                return fieldValue as! [Any]
-            default:
-                return fieldValue
-                
-            }
-        }
-        return NSNull()
-    }
  
     func verifyUrl(urlString: String?) -> Bool {
         guard let urlString = urlString,
