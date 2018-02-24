@@ -40,7 +40,7 @@ With DataBindSwift you can map your components by their model structure.
 
 - Add a UIView in your xib/story board and set that as DataBindView subclass.
 - Add some components that implement DataBindable in that DataBindView.
-- On the Attributes Inspector, fill: FieldType, FieldPath.
+- On the Attributes Inspector, fill: FieldPath.
 - After setting up the components, you need right click on your DataBindView and bind it with DataBindable components.
 - Create an @IBoutlet to bind your DataBindView.
 
@@ -116,20 +116,15 @@ For Step 4 and 5 woks, you must did Interface Builder Step.
 
 Learn about how to use variables of DataBindable protocol works.
 
-| Variable         | Type                                         | Description                                                  |
-| ---------------- | -------------------------------------------- | ------------------------------------------------------------ |
-| Required         | Bool (optional)                              | Fill component is mandatory                                  |
-| Required Error   | String (optional)                            | Error message if component is not filled                     |
-| Field Type       | String: 'Text', 'Number', 'Logic' or 'Image' | This is necessary for the algorithm to cast correctly for the corresponding field type. |
-| Filed Type Error | String (optional)                            | Cast error message                                           |
-| Field Path       | String                                       | Path of the field on your class structure, for example: 'vehicle.brand.car.model'. Vehicule will be your main entity, 'Brand' and 'Car' will be other two JSON object , and 'model' will be the field of 'Car' object. |
-| Persist          | Bool                                         | If persist = false then this field will only use "read only" mode. |
-
-
+| Variable       | Type              | Description                                                  |
+| -------------- | ----------------- | ------------------------------------------------------------ |
+| Required       | Bool (optional)   | Fill component is mandatory                                  |
+| Required Error | String (optional) | Error message if component is not filled                     |
+| Field Path     | String            | Path of the field on your class structure, for example: 'vehicle.brand.car.model'. Vehicule will be your main entity, 'Brand' and 'Car' will be other two JSON object , and 'model' will be the field of 'Car' object. |
 
 > Developers can use optionals DataBindable vars to create your own field validator.
 >
-> FieldTypeError, Required and Required Error is not used in DataBindSwift algorithm. You can use as Helper to make your own validation rule.
+> Required and Required Error is not used in DataBindSwift algorithm. You can use as Helper to make your own validation rule.
 
 
 
@@ -149,6 +144,6 @@ Learn about how to use variables of DataBindable protocol works.
   }
   ```
 
-  - "model" value depends of its component's type. For example, if the component is a UITextField or a UITextView, the value will be a String. If the component is a UIImageView, however, the value will be a UIImage.
+  - "model" value depends of its component's type. For example, if the component is a UITextField or a UITextView, the value will be a String.
 
     ​
