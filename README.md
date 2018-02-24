@@ -101,7 +101,7 @@ extension UIViewController : DataBindViewDelegate {
 self.dataBindView.toJSON()
 ```
 
-5: I recommend use [ObjectMapper][https://github.com/Hearst-DD/ObjectMapper] to transform some model to JSON ([String:Any])
+5: I recommend use [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) to transform some model to JSON ([String:Any])
 
 ```swift
 self.dataBindView.fillFields(withObject:someModel.toJSON())
